@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #081529;
+    color: #8892b0;
+    font-family: "Lexend", serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+strong {
+    color: white;
+}
+
+.cursor {
+    position: fixed;
+    width: 500px; /* Ukuran lingkaran lebih besar */
+    height: 500px;
+    background: rgba(0, 128, 255, 0.2); /* Warna lebih pudar */
+    border-radius: 50%;
+    pointer-events: none; /* Agar tidak mengganggu klik */
+    transform: translate(-50%, -50%);
+    filter: blur(150px); /* Efek blur agar tampak pudar */
+    transition: transform 0.1s ease-out; /* Animasi pergerakan */
+  }
+    
+
+.container {
+    display: flex;
+    height: 100vh;
+    gap: 30px;
+    
+}
+
+.sidebar {
+    width: 50%;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.sidebar h1 {
+    color: rgb(215, 215, 215);
+    font-size: 50px;
+}
+
+.sidebar h2 {
+    color: rgb(215, 215, 215);
+}
+
+.sidebar p {
+    font-size: 16px;
+    color: #8892b0;
+    max-width: 50vh;
+}
+
+.sidebar ul {
+    list-style: none; /* Hilangkan bullet points */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px; /* Jarak antar item */
+  }
+
+.sidebar .menu li{
+    position: relative;
+}
+
+.sidebar .menu li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-left:50px; /* Increased padding to make room for the line */
+    transform: translateX(0); /* Initial position */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add transform to transition */
+}
+
+.sidebar .menu li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar .menu li:hover::before {
+    width: 50px;
+    background-color: #fff;
+}
+
+.sidebar .menu li:hover a {
+    color: white;
+    transform: translateX(10px); /* Move text right on hover */
+}
+
+.sidebar .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color:  #8892b0;
+    margin-top: 150px;
+}
+
+.sidebar .social-icons a:hover {
+    color: white;
+}
+
+.content {
+    max-width: 800px;
+    width: 40%;
+    margin-left: 100px;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.content-text{
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 30px;
+    line-height: 1.6;    /* biar teks lebih lega */
+    text-align: justify;
+}
+
+
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-wrapper img {
+    max-width: 60%;
+    height: auto;
+  }
+
+.card-list .card-item .card-link {
+    width: 400px;
+    display: block;
+    background-color: #030d21;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #193c70;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #8892b0;
+    font-weight: 600;
+}
+
+.card-wrapper .card-list {
+    display: flex;
+    overflow-x: scroll;  /* Agar konten dapat digulir secara horizontal */
+    gap: 1rem;  /* Menambahkan jarak antar kartu */
+    padding: 1rem 0;  /* Memberikan sedikit padding agar konten tidak menempel dengan tepi */
+    scrollbar-width: thin;
+
+}
+
+#skill .skill-icon {
+    display: flex;  /* Menyusun gambar secara horizontal */
+    justify-content: space-around;  /* Menyebarkan gambar dengan jarak yang merata */
+    align-items: center;  /* Memastikan gambar sejajar secara vertikal */
+    gap: 1rem;  /* Menambahkan jarak antar gambar */
+}
+
+#skill .skill-icon img {
+    width: 50px;  /* Menentukan ukuran lebar gambar */
+    height: auto;  /* Menjaga rasio aspek gambar tetap */
+    transition: transform 0.3s ease;  /* Menambahkan efek transisi ketika ukuran diubah */
+}
+
+/* Jika ingin memberi efek hover agar gambar sedikit membesar */
+#skill .skill-icon img:hover {
+    transform: scale(1.2);  /* Membuat gambar membesar saat dihover */
+}
+
+section {
+    margin-top: 100px;
+  }
+  
+  /* Atau lebih spesifik: */
+  #about, #experiences, #skill {
+    margin-top: 100px;
+  }
+  
+
+/* Untuk layar kecil (HP) */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+    .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  /* Untuk layar besar (PC) */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+    .container {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .card-container {
+      flex-direction: row; /* Jadi horizontal kalau layar lebar */
+      justify-content: center;
+    }
+  }
+  
+  

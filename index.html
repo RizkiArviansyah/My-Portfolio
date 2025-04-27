@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Web Portofolio</title>
+</head>
+<body>
+
+    <div class="cursor"></div>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-text">
+            <h1>Rizki Arviansyah</h1>
+            <h2>Portfolio</h2>
+            <p>Welcome to my website, I am here to introduce my self</p>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experiences">Experience</a></li>
+                    <li><a href="#skill">My Skill </a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://github.com/RizkiArviansyah"><i class="fa-brands fa-github fa-2x"></i></a>
+                <a href="mailto:rizkiarvi15@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
+                <a href="https://www.instagram.com/rarvi_/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/rizki-arviansyah-202a8b309/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            </div>
+        </div>
+        </aside>
+        <main class="content">
+            <div class="content-text">
+                <div id="about" class="about">
+                    <div class="image-wrapper">
+                    <img src="/img/389621_eb994c698f22135c7b5c738dbfa63156-8_11_2024__8_54_24_PM-removebg-preview.png" alt="">
+                </div class="text-wrapper">
+                    <p>Nama saya Rizki Arviansyah, seorang siswa dari jurusan <strong>Rekayasa Perangkat Lunak</strong> yang sedang berpendidikan di sekolah
+                    <strong>SMKN 4 BANDUNG</strong>. Saya tertarik pada IT karena suka tantangan dan pemecahan masalah, saya juga suka mendesain. Sejak masih duduk dibangku 
+                    SMP, saya sering mengeksplorasi terkait teknologi, yang semakin memperkuat minat saya dalam pemrograman.</p>
+                    <p>Saya memiliki beberapa hal yang medukung untuk kinerja saya kedepannya, saya dapat berfikir secara inovatif dalam mencari solusi,
+                    dapat bekerja sama dengan tim. mudah untuk beradaptasi dengan perubahan dan tantangan baru.
+                    </p>
+                    <p>harapan terbesar saya adalah untuk terus berkembang tanpa batas.
+                        Saya ingin menjadikan diri saya pribadi yang selalu lapar akan ilmu dan haus akan tantangan baru.
+                        Di dunia teknologi yang bergerak begitu cepat.</p>
+                </div>
+            
+                <div id="experiences" class="experiences">
+                <div class="card">
+                    <div class="card-wrapper">
+                        <ul class="card-list">
+                            <li class="card-item">
+                                <a href="#" class="card-link">
+                                    <img src="img/sinema.png" alt="" class="card-image">
+                                    <h2 class="card-title">Use GET method from cinema API to make cinema list</h2>
+                                </a>
+                            </li>
+                            <li class="card-item">
+                                <a href="#" class="card-link">
+                                    <img src="img/awalanpm.png" alt="" class="card-image">
+                                    <h2 class="card-title">Make dashboard and connect to Report employee performance manage activity</h2>
+                                </a>
+                            </li>
+                            <li class="card-item">
+                                <a href="#" class="card-link">
+                                    <img src="img/performancemanage.png" alt="" class="card-image">
+                                    <h2 class="card-title">Collaboration to create a web page for employee performance management reports</h2>
+                                </a>
+                            </li>
+                            <li class="card-item">
+                                <a href="#" class="card-link">
+                                    <img src="img/Screenshot 2025-01-15 142618.png" alt="" class="card-image">
+                                    <h2 class="card-title">Make GET method from API reqres</h2>
+                                </a>
+                            </li>
+                            <li class="card-item">
+                                <a href="#" class="card-link">
+                                     <img src="img/Screenshot 2025-02-03 111139.png" alt="" class="card-image">
+                                    <h2 class="card-title">Collaboration make UI/UX Design in Figma</h2>
+                                </a>
+                             </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skill">
+                <div class="skill-icon">
+                    <img src="img/html_1051277.png" alt="HyperText Markup Languange">
+                    <img src="img/css-3_732190.png" alt="Cascading Style Sheets">
+                    <img src="img/js_5968292.png" alt="JavaScript">
+                    <img src="img/web_15457933.png" alt="Hypertext Preprocessor">
+                    <img src="img/Laravel.svg-removebg-preview.png" alt="Laravel">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>const cursor = document.querySelector(".cursor");
+
+        document.addEventListener("mousemove", (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+
+        const scrollContainer = document.querySelector(".scroll-container");
+
+        scrollContainer.addEventListener("wheel", (e) => {
+        if (e.deltaY !== 0) {  // Pastikan hanya menangkap scroll vertical
+            e.preventDefault();  // Stop scroll halaman utama
+            scrollContainer.scrollLeft += e.deltaY * 2;  // Geser horizontal lebih cepat
+            behavior: "smooth";
+        }
+        });
+
+
+
+        </script>
+</body>
+</html>
